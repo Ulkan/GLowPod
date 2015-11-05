@@ -8,11 +8,14 @@ public class SpawnerBullet : MonoBehaviour
 	public float speed;
 	Ray ray;
 	public float colliderSize;
+	bool toDestroy;
+	public float destroyTime;
+	float destroyTimer;
 
 	// Use this for initialization
 	void Start () 
 	{
-	
+		toDestroy = false;
 	}
 	
 	// Update is called once per frame
@@ -28,7 +31,8 @@ public class SpawnerBullet : MonoBehaviour
 				Vector3 toMid = Vector3.zero - aquaStuff.transform.position;
 				toMid = toMid.normalized;
 				aquaStuff.transform.up = toMid;
-				Destroy (this.gameObject);
+				toDestroy = true;
+				//Destroy (this.gameObject);
 			}
 			else if ( hit.collider.gameObject.tag == "Ground")
 			{
@@ -37,12 +41,22 @@ public class SpawnerBullet : MonoBehaviour
 				Vector3 toMiddle = Vector3.zero - groundStuff.transform.position;
 				toMiddle = toMiddle.normalized;
 				groundStuff.transform.forward = toMiddle;
-				Destroy (this.gameObject);
+				toDestroy = true;
+				//Destroy (this.gameObject);
 			}
 
 
 		}
 		transform.position += transform.forward * Time.deltaTime * speed;
+
+		if ( toDestroy)
+		{
+			destroyTimer += Time.deltaTime;
+			if(destroyTimer >= destroyTime)
+			{
+				Destroy (this.gameObject);
+			}
+		}
 	}
 
 	void OnCollisionEnter ( Collision other )

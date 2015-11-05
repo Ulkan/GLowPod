@@ -9,7 +9,9 @@ public class Grow : MonoBehaviour
 	public float rotateMax;
 	float randScale;
 	Vector3 actualScale;
-	float randomRotate;
+	float randomRotateX;
+	float randomRotateY;
+	float randomRotateZ;
 
 	// Use this for initialization
 	void Start () 
@@ -17,8 +19,9 @@ public class Grow : MonoBehaviour
 
 		randScale = Random.Range (desiredScale - minMax, desiredScale + minMax);
 		actualScale = transform.localScale;
-		randomRotate = Random.Range (0f,rotateMax);
-
+		randomRotateX = Random.Range (0f,rotateMax);
+		randomRotateY = Random.Range (0f,rotateMax);
+		randomRotateZ = Random.Range (0f,rotateMax);
 		//transform.position = transform.position - transform.forward * 0.5f;
 
 	}
@@ -31,7 +34,7 @@ public class Grow : MonoBehaviour
 			actualScale.x += growSpeed * Time.deltaTime;
 			actualScale.y += growSpeed * Time.deltaTime;
 			actualScale.z += growSpeed * Time.deltaTime;
-			transform.Rotate ( 0,0, randomRotate);
+			transform.Rotate (randomRotateX,randomRotateY,randomRotateZ);
 		}
 		else 
 		{

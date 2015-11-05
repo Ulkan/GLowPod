@@ -6,6 +6,7 @@ public class Rotor : MonoBehaviour
 	public float rotateSpeed;
 	public float accel;
 	public float maxSpeed;
+	public float minSpeed;
 	float actualSpeed;
 
 	// Use this for initialization
@@ -27,9 +28,9 @@ public class Rotor : MonoBehaviour
 		if(Input.GetAxis("Vertical") != 0f)
 		{
 			actualSpeed += Input.GetAxis("Vertical") * accel * Time.deltaTime;
-			if ( actualSpeed <= 0f)
+			if ( actualSpeed <= maxSpeed * (-1))
 			{
-				actualSpeed = 0f;
+				actualSpeed = maxSpeed * (-1);
 			}
 			if ( actualSpeed >= maxSpeed )
 			{
