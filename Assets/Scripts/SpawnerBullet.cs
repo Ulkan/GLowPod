@@ -22,7 +22,7 @@ public class SpawnerBullet : MonoBehaviour
 	void FixedUpdate () 
 	{
 		RaycastHit hit;
-		if(Physics.Raycast (transform.position, transform.forward, out hit, colliderSize))
+		if(Physics.Raycast (transform.position, transform.forward, out hit, colliderSize) && !toDestroy)
 		{
 			if(hit.collider.gameObject.tag == "Water")
 			{
@@ -47,9 +47,11 @@ public class SpawnerBullet : MonoBehaviour
 
 
 		}
-		transform.position += transform.forward * Time.deltaTime * speed;
-
-		if ( toDestroy)
+		if (!toDestroy) 
+		{
+			transform.position += transform.forward * Time.deltaTime * speed;
+		}
+		else
 		{
 			destroyTimer += Time.deltaTime;
 			if(destroyTimer >= destroyTime)
