@@ -1,32 +1,6 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-4-40704
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-4-3564
 Cmd: getPlatforms
-Cmd: compileSnippet
-  api=4 type=0 insize=8109 outsize=3955 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=8109 outsize=3799 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6511 outsize=4061 kw=SPOT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=6511 outsize=883 kw=SPOT SHADOWS_DEPTH SHADOWS_NATIVE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6511 outsize=3955 kw=DIRECTIONAL SHADOWS_SCREEN pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=6511 outsize=821 kw=POINT_COOKIE SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6511 outsize=4239 kw=POINT SHADOWS_CUBE SHADOWS_SOFT pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=6511 outsize=2230 kw=DIRECTIONAL SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6511 outsize=7205 kw=POINT_COOKIE SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=6511 outsize=2299 kw=DIRECTIONAL SHADOWS_SCREEN pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6511 outsize=7278 kw=DIRECTIONAL_COOKIE SHADOWS_SCREEN pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6511 outsize=7823 kw=POINT_COOKIE SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6511 outsize=8440 kw=POINT SHADOWS_CUBE SHADOWS_SOFT pd= ok=1
 Unhandled exception: Readfile from pipe failed. GLE=Le canal de communication a été fermé.
 
 
