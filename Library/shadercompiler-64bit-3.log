@@ -1,6 +1,8 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-3-14356
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-3-10456
 Cmd: getPlatforms
+Cmd: compileSnippet
+  api=1 type=0 insize=1454 outsize=145 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
 Unhandled exception: Readfile from pipe failed. GLE=Le canal de communication a été fermé.
 
 
