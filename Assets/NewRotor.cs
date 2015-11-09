@@ -18,8 +18,6 @@ public class NewRotor : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-
-
 		if (isLocked)
 		{
 			transform.Rotate( new Vector3 ( actualSpeed * Time.deltaTime * dirRotate,0,0));
@@ -27,7 +25,7 @@ public class NewRotor : MonoBehaviour
 
 		if(Input.GetAxis("Horizontal") != 0f)
 		{
-			transform.Rotate ( new Vector3 ( 0,actualSpeed * Time.deltaTime * Input.GetAxis("Horizontal") * -1f ,0));
+			transform.Rotate ( new Vector3 ( 0,0,actualSpeed * Time.deltaTime * Input.GetAxis("Horizontal") * -1f ));
 		}
 
 		if(Input.GetAxis("Vertical") != 0f && !isLocked)

@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\ProjectUnity\OnAir\Proto2D\Assets\Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraRotate.cs">
     <Files>
-      <File FileName="..\..\..\..\..\ProjectUnity\OnAir\Proto2D\Assets\Scripts\PlayerController.cs" Line="133" Column="18" />
+      <File FileName="Assets\NewRotor.cs" Line="28" Column="106" />
+      <File FileName="Assets\Scripts\CameraRotate.cs" Line="24" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
