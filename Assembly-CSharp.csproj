@@ -48,8 +48,10 @@
      <Compile Include="Assets\NewRotor.cs" />
      <Compile Include="Assets\Rotation.cs" />
      <Compile Include="Assets\Scripts\CameraRotate.cs" />
+     <Compile Include="Assets\Scripts\ChangeColor.cs" />
      <Compile Include="Assets\Scripts\Grow.cs" />
      <Compile Include="Assets\Scripts\LifeTime.cs" />
+     <Compile Include="Assets\Scripts\MyRotationCamera.cs" />
      <Compile Include="Assets\Scripts\Rotor.cs" />
      <Compile Include="Assets\Scripts\SpawnTree.cs" />
      <Compile Include="Assets\Scripts\SpawnerBullet.cs" />
@@ -65,11 +67,17 @@
      <None Include="Assets\Shaders\Tiles.shader" />
      <None Include="Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\Shaders\CustomLighting.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

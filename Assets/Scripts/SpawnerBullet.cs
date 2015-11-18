@@ -3,19 +3,46 @@ using System.Collections;
 
 public class SpawnerBullet : MonoBehaviour 
 {
-	public GameObject waterSpawn;
-	public GameObject groundSpawn;
+	public GameObject normalCrystal;
+	public GameObject lightBlue;
+	public GameObject lightOrange;
+	public GameObject lightPurple;
 	public float speed;
+	public bool isSpecial = false;
+
+	public string light;
 	Ray ray;
 	public float colliderSize;
 	bool toDestroy;
 	public float destroyTime;
 	float destroyTimer;
 
+	GameObject previousLight;
+	GameObject toSpawn;
+
 	// Use this for initialization
 	void Start () 
 	{
 		toDestroy = false;
+		if(isSpecial)
+		{
+			switch(light)
+			{
+			case "Blue" :
+				previousLight = GameObject.Find ("CrystalGlowBlue(Clone)");
+				toSpawn = lightBlue;
+				break;
+			case "Orange" :
+				previousLight = GameObject.Find ("CrystalGlowOrange(Clone)");
+				toSpawn = lightOrange;
+				break;
+			case "Purple" : 
+				previousLight = GameObject.Find ("CrystalGlowPurple(Clone)");
+				toSpawn = lightPurple;
+				break;
+			}
+
+		}
 	}
 	
 	// Update is called once per frame
@@ -24,25 +51,26 @@ public class SpawnerBullet : MonoBehaviour
 		RaycastHit hit;
 		if(Physics.Raycast (transform.position, transform.forward, out hit, colliderSize) && !toDestroy)
 		{
-			if(hit.collider.gameObject.tag == "Water")
+
+			if ( hit.collider.gameObject.tag == "Ground")
 			{
-				//Debug.Log("Colliding with Water");
-				GameObject aquaStuff = Instantiate(waterSpawn, transform.position, transform.rotation) as GameObject;
-				Vector3 toMid = Vector3.zero - aquaStuff.transform.position;
-				toMid = toMid.normalized;
-				aquaStuff.transform.up = toMid;
+				if(isSpecial)
+				{
+					if(previousLight == null)
+					{
+						previousLight = Instantiate(toSpawn, transform.position + transform.up * 5, transform.rotation) as GameObject;
+					}
+					else 
+					{
+						previousLight.transform.position = transform.position + transform.up * 5;
+					}
+				}
+				else 
+				{
+					Instantiate(normalCrystal, transform.position, transform.rotation);
+				}
+
 				toDestroy = true;
-				//Destroy (this.gameObject);
-			}
-			else if ( hit.collider.gameObject.tag == "Ground")
-			{
-				//Debug.Log("Colliding with Ground");
-				GameObject groundStuff = Instantiate(groundSpawn, transform.position, transform.rotation) as GameObject;
-				Vector3 toMiddle = Vector3.zero - groundStuff.transform.position;
-				toMiddle = toMiddle.normalized;
-				groundStuff.transform.forward = toMiddle;
-				toDestroy = true;
-				//Destroy (this.gameObject);
 			}
 
 
@@ -60,28 +88,5 @@ public class SpawnerBullet : MonoBehaviour
 			}
 		}
 	}
-
-	void OnCollisionEnter ( Collision other )
-	{
-		/*
-		if ( other.gameObject.tag == "Water")
-		{
-			Debug.Log("Colliding with Water");
-			GameObject aquaStuff = Instantiate(waterSpawn, transform.position, transform.rotation) as GameObject;
-			Vector3 toMid = Vector3.zero - aquaStuff.transform.position;
-			toMid = toMid.normalized;
-			aquaStuff.transform.up = toMid;
-			Destroy (this.gameObject);
-		}
-		else if ( other.gameObject.tag == "Ground")
-		{
-			Debug.Log("Colliding with Ground");
-			GameObject groundStuff = Instantiate(groundSpawn, transform.position, transform.rotation) as GameObject;
-			Vector3 toMiddle = Vector3.zero - groundStuff.transform.position;
-			toMiddle = toMiddle.normalized;
-			groundStuff.transform.forward = toMiddle;
-			Destroy (this.gameObject);
-		}
-		*/
-	}
+	
 }

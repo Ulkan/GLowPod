@@ -1,36 +1,10 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-19864
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-22768
 Cmd: getPlatforms
 Cmd: compileSnippet
-  api=4 type=0 insize=8247 outsize=3955 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+  api=4 type=0 insize=1482 outsize=2038 kw=SOFTPARTICLES_ON pd= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=8247 outsize=3950 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=6618 outsize=693 kw=DIRECTIONAL SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=6618 outsize=779 kw=POINT_COOKIE SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=6618 outsize=883 kw=SPOT SHADOWS_DEPTH SHADOWS_NATIVE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6618 outsize=3955 kw=DIRECTIONAL SHADOWS_SCREEN pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=6618 outsize=821 kw=POINT_COOKIE SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=6618 outsize=883 kw=SPOT SHADOWS_DEPTH SHADOWS_SOFT SHADOWS_NATIVE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6618 outsize=4239 kw=POINT SHADOWS_CUBE SHADOWS_SOFT pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=6618 outsize=2486 kw=SPOT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6618 outsize=6961 kw=DIRECTIONAL_COOKIE SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6618 outsize=8034 kw=SPOT SHADOWS_DEPTH SHADOWS_NATIVE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6618 outsize=7278 kw=DIRECTIONAL_COOKIE SHADOWS_SCREEN pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=6618 outsize=2640 kw=POINT_COOKIE SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6618 outsize=8440 kw=POINT SHADOWS_CUBE SHADOWS_SOFT pd= ok=1
+  api=8 type=1 insize=1482 outsize=1227 kw=SOFTPARTICLES_OFF pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
 Unhandled exception: Readfile from pipe failed. GLE=Le canal de communication a été fermé.
 
 
