@@ -21,7 +21,7 @@ public class CameraRotate : MonoBehaviour
 			
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			
+
 			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 180);
 		}
 		else if (axes == RotationAxes.MouseX)
